@@ -17,7 +17,7 @@ Parameters:
   GitHubRepo:
     Type: String
     Description: GitHub Repository
-    Default: aws-plaid-demo-app
+    Default: aws-plaid-demo-app-2
   PlaidClientId:
     Type: String
     Description: Plaid Client ID
@@ -85,7 +85,7 @@ Resources:
             reason: "Ignoring KMS key"
     Properties:
       Description: !Sub "Plaid Credential - ${PlaidEnvironment}"
-      Name: !Sub "plaid/${PlaidEnvironment}/credentials"
+      Name: PlaidCredential
       SecretString: !Sub |-
         {
           "client_id": "${PlaidClientId}",
